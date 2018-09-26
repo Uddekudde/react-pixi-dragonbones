@@ -1,0 +1,30 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^1.5.0",
+    "@types/node": "^10.5.5",
+    "normalize.css": "^8.0.0",
+    "pixi.js": "^4.8.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-loadable": "^5.5.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "react-transition-group": "^1.2.1",
+    "redux": "^4.0.0",
+    "typescript": "^2.9.2"
+  },
+  "scripts": {
+    "start": "tsc && react-scripts start",
+    "build": "tsc && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@types/pixi.js": "^4.8.0",
+    "file-loader": "^1.1.11"
+  }
+}
