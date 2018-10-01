@@ -21,6 +21,9 @@ import BaseDemo from './BaseDemo.js';
 export default class HelloDragonBones extends BaseDemo {
     protected hasText: boolean = false;
     protected readonly ARMATURE_DISPLAY_NAME: string = "armature";
+    protected xOffset: number;
+    protected yOffset: number;
+    protected animationReady: boolean;
 
     public constructor(private canvas, private skeleton, private texJson) {
         super(canvas);
@@ -40,6 +43,20 @@ export default class HelloDragonBones extends BaseDemo {
         );
     }
 
+    checkScale(armatureDisplay){
+        if((this._renderer.width > 1080)||(this._renderer.height > 1920)){
+            let scaleFactor;
+            if(this._renderer.height >= this._renderer.width){
+                scaleFactor = this._renderer.height / 1080;
+            } else {
+                scaleFactor = this._renderer.width / 1920;
+            }
+            scaleFactor = (scaleFactor < 1) ? 1 : scaleFactor;
+            armatureDisplay.scale.x = scaleFactor;
+            armatureDisplay.scale.y = scaleFactor;
+        }
+    }
+
     changeText(text){
         if(this.hasText) {
             let childToRemove = this.getChildByName(this.TEXT_NAME);
@@ -50,31 +67,40 @@ export default class HelloDragonBones extends BaseDemo {
         this.hasText = true;
     }
 
+    playAnimation(animationName){
+        if(this.animationReady) {
+            let armatureDisplay = this.getChildByName(this.ARMATURE_DISPLAY_NAME) as dragonBones.PixiArmatureDisplay;
+            armatureDisplay.animation.play(animationName);
+        }
+    }
+
     resizeRenderer(width, height){
         this._renderer.resize(width, height);
         let armatureDisplay = this.getChildByName(this.ARMATURE_DISPLAY_NAME);
-        armatureDisplay.x = (this._renderer.width / 2) - 960;
-        armatureDisplay.y = (this._renderer.height / 2) - 540;
+        armatureDisplay.x = (this._renderer.width / 2) - this.xOffset;
+        armatureDisplay.y = (this._renderer.height / 2) - this.yOffset;
+        this.checkScale(armatureDisplay);
     }
 
 
     protected _onStart(): void {
         const factory = (window as any).dragonBones.PixiFactory.factory;
-        // factory.parseDragonBonesData(this._pixiResource["resource/mecha_1002_101d_show/mecha_1002_101d_show_ske.json"].data);
-         factory.parseDragonBonesData(this.skeleton);
+        factory.parseDragonBonesData(this.skeleton);
         factory.parseTextureAtlasData(this.texJson, this._pixiResources["/static/media/hills_tex.d150d0de.png"].texture);
 
         const armatureDisplay = factory.buildArmatureDisplay("Armature", "hills");
-        armatureDisplay.animation.play("animtion0");
+        armatureDisplay.animation.play("default");
 
         armatureDisplay.name = this.ARMATURE_DISPLAY_NAME;
+        this.animationReady = true;
 
-        armatureDisplay.x = (this._renderer.width / 2) - 960;
-        armatureDisplay.y = (this._renderer.height / 2) - 540;
-        /**
-        armatureDisplay.scale.x = 0.5;
-        armatureDisplay.scale.y = 0.5;
-        */
+        armatureDisplay.anchor.x = 0;
+        armatureDisplay.anchor.y = 0;
+
+        this.xOffset = (this._renderer.width / 2);
+        this.yOffset = (this._renderer.height / 2);
+
+        this.checkScale(armatureDisplay);
 
         let alphaFilter = new PIXI.filters.AlphaFilter();
         alphaFilter.alpha = 0;

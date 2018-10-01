@@ -4,3 +4,10 @@ export function changeText(text){
         payload: text,
     }
 }
+
+export function changeAnimation(animationName){
+    return {
+        type: "CHANGE_ANIMATION",
+        payload: animationName,
+    }
+}

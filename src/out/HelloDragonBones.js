@@ -41,6 +41,20 @@ class HelloDragonBones extends BaseDemo_js_1.default {
         //"src/out/resource/NewProject_tex.png"
         "/static/media/hills_tex.d150d0de.png");
     }
+    checkScale(armatureDisplay) {
+        if ((this._renderer.width > 1080) || (this._renderer.height > 1920)) {
+            let scaleFactor;
+            if (this._renderer.height >= this._renderer.width) {
+                scaleFactor = this._renderer.height / 1080;
+            }
+            else {
+                scaleFactor = this._renderer.width / 1920;
+            }
+            scaleFactor = (scaleFactor < 1) ? 1 : scaleFactor;
+            armatureDisplay.scale.x = scaleFactor;
+            armatureDisplay.scale.y = scaleFactor;
+        }
+    }
     changeText(text) {
         if (this.hasText) {
             let childToRemove = this.getChildByName(this.TEXT_NAME);
@@ -50,26 +64,32 @@ class HelloDragonBones extends BaseDemo_js_1.default {
         this.createText(text, 2);
         this.hasText = true;
     }
+    playAnimation(animationName) {
+        if (this.animationReady) {
+            let armatureDisplay = this.getChildByName(this.ARMATURE_DISPLAY_NAME);
+            armatureDisplay.animation.play(animationName);
+        }
+    }
     resizeRenderer(width, height) {
         this._renderer.resize(width, height);
         let armatureDisplay = this.getChildByName(this.ARMATURE_DISPLAY_NAME);
-        armatureDisplay.x = (this._renderer.width / 2) - 960;
-        armatureDisplay.y = (this._renderer.height / 2) - 540;
+        armatureDisplay.x = (this._renderer.width / 2) - this.xOffset;
+        armatureDisplay.y = (this._renderer.height / 2) - this.yOffset;
+        this.checkScale(armatureDisplay);
     }
     _onStart() {
         const factory = window.dragonBones.PixiFactory.factory;
-        // factory.parseDragonBonesData(this._pixiResource["resource/mecha_1002_101d_show/mecha_1002_101d_show_ske.json"].data);
         factory.parseDragonBonesData(this.skeleton);
         factory.parseTextureAtlasData(this.texJson, this._pixiResources["/static/media/hills_tex.d150d0de.png"].texture);
         const armatureDisplay = factory.buildArmatureDisplay("Armature", "hills");
-        armatureDisplay.animation.play("animtion0");
+        armatureDisplay.animation.play("default");
         armatureDisplay.name = this.ARMATURE_DISPLAY_NAME;
-        armatureDisplay.x = (this._renderer.width / 2) - 960;
-        armatureDisplay.y = (this._renderer.height / 2) - 540;
-        /**
-        armatureDisplay.scale.x = 0.5;
-        armatureDisplay.scale.y = 0.5;
-        */
+        this.animationReady = true;
+        armatureDisplay.anchor.x = 0;
+        armatureDisplay.anchor.y = 0;
+        this.xOffset = (this._renderer.width / 2);
+        this.yOffset = (this._renderer.height / 2);
+        this.checkScale(armatureDisplay);
         let alphaFilter = new PIXI.filters.AlphaFilter();
         alphaFilter.alpha = 0;
         armatureDisplay.filters = [alphaFilter];

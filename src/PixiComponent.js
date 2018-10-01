@@ -6,13 +6,14 @@ import './pixiComponent.css';
 import HelloDragonBones from './out/HelloDragonBones.js';
 import skeleton from './out/resource/hills_ske.json';
 import texJson from "./out/resource/hills_tex.json";
-import texPng from "./out/resource/hills_tex.png"; //Import so webpack puts the png in the static/media folder.
+import texPng from "./out/resource/hills_tex.png"; //Import so webpack puts the png in the build/static/media folder.
 
-import changeText from "./actions/animationActions";
+import changeText from "./actions/animationActions"; //used in mapDispatchToProps
 
 const mapStateToProps = state => {
     return {
-        text: state.animation.animationText
+        text: state.animation.animationText,
+        animation: state.animation.animationName
     }
 };
 
@@ -47,14 +48,15 @@ class PixiComponent extends React.Component{
         let component = this;
         //let elHeight = document.getElementById('containerDiv').clientHeight;
         component.setState({pixiHandler: new HelloDragonBones(this.gameCanvas, skeleton, texJson)});
-        //component.setState({readyForUpdate: true});
+        component.setState({readyForUpdate: true});
         window.addEventListener("resize", this.resizeRenderer);
     }
 
     componentDidUpdate(){
-       // if(this.state.readyForUpdate) {
-            this.state.pixiHandler.changeText(this.props.text);
-       // }
+        if(this.state.readyForUpdate) {
+            //this.state.pixiHandler.changeText(this.props.text);
+            this.state.pixiHandler.playAnimation(this.props.animation);
+        }
     }
 
     componentWillUnmount() {
@@ -62,8 +64,8 @@ class PixiComponent extends React.Component{
     }
 
     resizeRenderer = () => {
-        console.log(this.gameCanvas.clientHeight+"  "+this.gameCanvas.clientWidth);
-        this.state.pixiHandler.resizeRenderer(this.gameCanvas.clientWidth, window.innerHeight -103);
+        console.log(this.gameCanvas.clientHeight+"  "+this.gameCanvas.clientWidth+" canvas");
+        this.state.pixiHandler.resizeRenderer(this.gameCanvas.clientWidth, window.innerHeight -3);
         this.forceUpdate();
     }
 
@@ -78,7 +80,9 @@ class PixiComponent extends React.Component{
 
     render(){
         let component = this;
-        let height = window.innerHeight -103;
+        //let height = window.innerHeight -103;
+        //let height = window.innerHeight -67;
+        let height = window.innerHeight -3;
 
         return (
             <div>

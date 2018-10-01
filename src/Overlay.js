@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { Transition } from 'react-transition-group';
+import Button from '@material-ui/core/Button';
 
 import './overlay.css';
 
@@ -23,12 +24,24 @@ export default class Overlay extends React.Component {
     render(){
         return(
             <div className={ this.state.className } >
-                <Link className="closeBtn animated animatedFadeInUp fadeInUp" style={{animationDelay: ".5s"}}  to='/' >CLOSE</Link>
+                {/*<Link className="closeBtn animated animatedFadeInUp fadeInUp" style={{animationDelay: ".5s"}}  to='/' >CLOSE</Link>*/}
                 <div style={{display: "flex", flexDirection:"row"}}>
                     <div style={{flex:"1"}}/>
                     <div style={{flex:"8"}}>
                         <div style={{display:"flex", flexDirection:"column"}}>
-                            <div style={{flex:"1 270px" }}/>
+                            <div style={{display: 'flex', flex:"1 270px", flexDirection:"row"}}>
+                                <div style={{flex:"1 270px" }}/>
+                                <div style={{display: 'flex', flex:"1 270px", flexDirection:'column' }}>
+                                    <div style={{flex:"1 270px" }}/>
+                                    <div className="closeBtn animated animatedFadeInUp fadeInUp" style={{marginLeft:'auto',marginRight:'auto'}}>
+                                        <Button component={Link} style={{color: 'white'}} to='/'>
+                                            Close
+                                        </Button>
+                                    </div>
+                                    <div style={{flex:"1 270px" }}/>
+                                </div>
+                                <div style={{flex:"1 270px" }}/>
+                            </div>
                             <div style={{flex:"2 540px" }}>
                                 <h1 className="title1 animated animatedFadeInUp fadeInUp" style={{animationDelay: ".5s"}} >Hello,</h1>
                                 <h2 className="title2 animated animatedFadeInUp fadeInUp" style={{animationDelay: ".7s"}} >Is it me you're looking for?</h2>
