@@ -17,8 +17,8 @@
  */
 /// <reference path="./dragonBones.d.ts" />
 import * as PIXI from 'pixi.js';
-import BaseDemo from './BaseDemo.js';
-export default class HelloDragonBones extends BaseDemo {
+import PixiBase from './PixiBase.js';
+export default class HelloDragonBones extends PixiBase {
     protected hasText: boolean = false;
     protected readonly ARMATURE_DISPLAY_NAME: string = "armature";
     protected xOffset: number;
@@ -57,6 +57,21 @@ export default class HelloDragonBones extends BaseDemo {
         }
     }
 
+    adjustFocus(armatureDisplay){
+        let focusCorrectionX;
+        let focusCorrectionY;
+        if((this._renderer.width / this._renderer.height) > 0.7) {
+            focusCorrectionX = (this._renderer.width < 1300) ? 300 : 0;
+            focusCorrectionY = (this._renderer.height < 800) ? 100 : 0;
+        } else {
+            let offsetCompensation = (this._renderer.width < 560) ? (this.xOffset / 4) : 0;
+            focusCorrectionX = 600 + offsetCompensation;
+            focusCorrectionY = 0;
+        }
+        armatureDisplay.x = (this._renderer.width / 2) - this.xOffset + focusCorrectionX;
+        armatureDisplay.y = (this._renderer.height / 2) - this.yOffset - focusCorrectionY;
+    }
+
     changeText(text){
         if(this.hasText) {
             let childToRemove = this.getChildByName(this.TEXT_NAME);
@@ -77,11 +92,9 @@ export default class HelloDragonBones extends BaseDemo {
     resizeRenderer(width, height){
         this._renderer.resize(width, height);
         let armatureDisplay = this.getChildByName(this.ARMATURE_DISPLAY_NAME);
-        armatureDisplay.x = (this._renderer.width / 2) - this.xOffset;
-        armatureDisplay.y = (this._renderer.height / 2) - this.yOffset;
+        this.adjustFocus(armatureDisplay);
         this.checkScale(armatureDisplay);
     }
-
 
     protected _onStart(): void {
         const factory = (window as any).dragonBones.PixiFactory.factory;
@@ -100,6 +113,7 @@ export default class HelloDragonBones extends BaseDemo {
         this.xOffset = (this._renderer.width / 2);
         this.yOffset = (this._renderer.height / 2);
 
+        this.adjustFocus(armatureDisplay);
         this.checkScale(armatureDisplay);
 
         let alphaFilter = new PIXI.filters.AlphaFilter();
