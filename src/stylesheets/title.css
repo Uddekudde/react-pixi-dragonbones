@@ -1,0 +1,83 @@
+.title{
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-size: 4em;
+    text-align: center;
+    transition: opacity 0.5s ease-in;
+}
+
+.subtitle{
+    font-size: .5em;
+}
+
+.title-vis{
+    opacity: 1;
+}
+
+.title-invis{
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@keyframes fadeOutUp {
+    from {
+        transform: translate3d(0,0,0);
+    }
+
+    to {
+        transform: translate3d(0,40px,0);
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes fadeOutUp {
+    from {
+        transform: translate3d(0,0,0);
+    }
+
+    to {
+        transform: translate3d(0,40px,0);
+        opacity: 0
+    }
+}
+
+.animated {
+    animation-delay: .5s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+.fadeOutUp {
+    opacity: 1;
+    animation-name: fadeOutUp;
+    -webkit-animation-name: fadeOutUp;
+}

@@ -1,33 +1,17 @@
 import React from 'react';
 import { connect } from "react-redux";
 import Button from '@material-ui/core/Button';
-import './pixiComponent.css';
+import '../stylesheets/pixiComponent.css';
+import TitleContainer from '../redux-containers/TitleContainer.js';
 
-import HelloDragonBones from './out/HelloDragonBones.js';
-import skeleton from './out/resource/hills_ske.json';
-import texJson from "./out/resource/hills_tex.json";
-import texPng from "./out/resource/hills_tex.png"; //Import so webpack puts the png in the build/static/media folder.
+import HelloDragonBones from '../out/HelloDragonBones.js';
+import skeleton from '../out/resource/hills_ske.json';
+import texJson from "../out/resource/hills_tex.json";
+import texPng from "../out/resource/hills_tex.png"; //Import so webpack puts the png in the build/static/media folder.
 
-import changeText from "./actions/animationActions"; //used in mapDispatchToProps
+import changeText from "../actions/animationActions"; //used in mapDispatchToProps
 
-const mapStateToProps = state => {
-    return {
-        text: state.animation.animationText,
-        animation: state.animation.animationName
-    }
-};
-
-const mapDispatchToProps = dispatch => {
-    return {
-        changeText: (text) =>
-            dispatch({
-                type: "CHANGE_TEXT",
-                payload: text
-            })
-    }
-};
-
-class PixiComponent extends React.Component{
+export default class PixiComponent extends React.Component{
 
 
     constructor(props) {
@@ -97,15 +81,13 @@ class PixiComponent extends React.Component{
                     Submit
                 </Button>*/}
                 <div style={{display:"flex", flexDirection: "column"}}>
-                    <div className="pixiCanvas" ref={(thisDiv) => {component.gameCanvas = thisDiv}} style={{flex:"1 1 "+height.toString()+"px"}} />
+                    <div className="pixiCanvas" ref={(thisDiv) => {component.gameCanvas = thisDiv}} style={{flex:"1 1 "+height.toString()+"px"}} >
+                        <TitleContainer/>
+                    </div>
                 </div>
             </div>
         );
     }
 }
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(PixiComponent);
 

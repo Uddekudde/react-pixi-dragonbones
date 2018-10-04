@@ -9,12 +9,32 @@
     bottom: 0;
     background-color: rgba(0,0,0,0.6); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    transition: opacity 0.5s ease-in;
-    opacity: 1;
 }
 
-.overlay-invis {
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.fadeIn {
     opacity: 0;
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
 }
 
 .closeBtn {
@@ -59,10 +79,6 @@
     animation-fill-mode: both;
     -webkit-animation-duration: 1s;
     -webkit-animation-fill-mode: both
-}
-
-.animatedFadeInUp {
-    opacity: 0
 }
 
 .fadeInUp {

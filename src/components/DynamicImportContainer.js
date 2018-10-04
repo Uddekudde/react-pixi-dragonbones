@@ -18,12 +18,12 @@ function Loading(props) {
 }
 
 const LoadableComponent = Loadable({
-    loader: () => import('./PixiComponent.js'),
+    loader: () => import('../redux-containers/PixiComponentContainer.js'),
     loading: Loading,
     delay: 300,
 });
 
-export default class DynamicContainer extends React.Component{
+export default class DynamicImportContainer extends React.Component{
     
     constructor(props){
         super(props);

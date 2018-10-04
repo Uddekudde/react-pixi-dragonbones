@@ -16,7 +16,7 @@ export default class TopBar extends React.Component {
                     <Typography variant="title" color="inherit">
                         {/*<Link to='/'>Home</Link>
                         <Link to='/pixi'>アニメ絵ション</Link>*/}
-                        <Button component={Link} style={{color: 'white'}} to='/about'>
+                        <Button component={Link} style={{color: 'white'}} to='/about' onClick={() => this.props.overlayActive('true')}>
                             About
                         </Button>
                     </Typography>
