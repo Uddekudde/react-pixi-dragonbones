@@ -8,8 +8,6 @@ export default class FlexTest extends React.Component {
     }
 
     render(){
-        let height = window.innerHeight -65;
-
         return (
             <div>
                 <LinearProgress />

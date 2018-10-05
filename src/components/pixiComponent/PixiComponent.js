@@ -1,15 +1,15 @@
 import React from 'react';
 import { connect } from "react-redux";
 import Button from '@material-ui/core/Button';
-import '../stylesheets/pixiComponent.css';
-import TitleContainer from '../redux-containers/TitleContainer.js';
+import './pixiComponent.css';
+import TitleContainer from '../title/TitleContainer.js';
 
-import DragonBonesScene from '../out/DragonBonesScene.js';
-import skeleton from '../out/resource/hills_ske.json';
-import texJson from "../out/resource/hills_tex.json";
-import texPng from "../out/resource/hills_tex.png"; //Import so webpack puts the png in the build/static/media folder. Webpack returns the path to the file.
+import DragonBonesScene from '../../out/DragonBonesScene.js';
+import skeleton from '../../out/resource/hills_ske.json';
+import texJson from "../../out/resource/hills_tex.json";
+import texPng from "../../out/resource/hills_tex.png"; //Import so webpack puts the png in the build/static/media folder. Webpack returns the path to the file.
 
-import changeText from "../actions/animationActions"; //used in mapDispatchToProps
+import changeText from "../../actions/animationActions"; //used in mapDispatchToProps
 
 export default class PixiComponent extends React.Component{
 

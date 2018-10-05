@@ -1,10 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom'
-import './stylesheets/index.css';
-import DynamicImportContainer from './components/DynamicImportContainer'
-import FlexTest from './components/FlexTest.js';
-import OverlayContainer from './redux-containers/OverlayContainer.js';
-import TopBarContainer from './redux-containers/TopBarContainer.js';
+import './index.css';
+import DynamicImportContainer from './components/pixiComponent/DynamicImportContainer'
+import FlexTest from './components/loadingBar/LoadingBar.js';
+import OverlayContainer from './components/overlay/OverlayContainer.js';
+import TopBarContainer from './components/topBar/TopBarContainer.js';
 
 export default class Main extends React.Component {
 
@@ -17,7 +17,6 @@ export default class Main extends React.Component {
                 <Switch>
                     <Route exact path='/' component={DynamicImportContainer} />
                     <Route exact path='/about' component={DynamicImportContainer} />
-                    <Route path='/pixi' component={FlexTest}/>
                 </Switch>
                 <Route exact path="/about" component={OverlayContainer} />
             </div>

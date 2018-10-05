@@ -1,18 +1,19 @@
 import { connect } from "react-redux";
-import Title from '../components/Title.js';
+import PixiComponent from './PixiComponent.js';
 
 const mapStateToProps = state => {
     return {
-        overlayIsActive: state.overlay.overlayIsActive
+        text: state.animation.animationText,
+        animation: state.animation.animationName
     }
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        overlayActive: (isActive) =>
+        changeText: (text) =>
             dispatch({
-                type: "OVERLAY_ACTIVE",
-                payload: isActive,
+                type: "CHANGE_TEXT",
+                payload: text
             })
     }
 };
@@ -20,4 +21,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Title);
+)(PixiComponent);

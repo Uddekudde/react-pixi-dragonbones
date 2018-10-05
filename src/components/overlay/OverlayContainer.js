@@ -1,6 +1,5 @@
 import { connect } from "react-redux";
-import TopBar from '../components/TopBar.js';
-
+import Overlay from './Overlay.js';
 const mapStateToProps = state => {
     return {
         overlayIsActive: state.overlay.overlayIsActive
@@ -20,4 +19,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(TopBar);
+)(Overlay);

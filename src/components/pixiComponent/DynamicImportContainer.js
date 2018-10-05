@@ -18,7 +18,7 @@ function Loading(props) {
 }
 
 const LoadableComponent = Loadable({
-    loader: () => import('../redux-containers/PixiComponentContainer.js'),
+    loader: () => import('./PixiComponentContainer.js'),
     loading: Loading,
     delay: 300,
 });

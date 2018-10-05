@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
-import Overlay from '../components/Overlay.js';
+import Title from './Title.js';
+
 const mapStateToProps = state => {
     return {
         overlayIsActive: state.overlay.overlayIsActive
@@ -19,4 +20,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Overlay);
+)(Title);

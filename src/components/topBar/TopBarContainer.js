@@ -1,19 +1,18 @@
 import { connect } from "react-redux";
-import PixiComponent from '../components/PixiComponent.js';
+import TopBar from './TopBar.js';
 
 const mapStateToProps = state => {
     return {
-        text: state.animation.animationText,
-        animation: state.animation.animationName
+        overlayIsActive: state.overlay.overlayIsActive
     }
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        changeText: (text) =>
+        overlayActive: (isActive) =>
             dispatch({
-                type: "CHANGE_TEXT",
-                payload: text
+                type: "OVERLAY_ACTIVE",
+                payload: isActive,
             })
     }
 };
@@ -21,4 +20,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(PixiComponent);
+)(TopBar);
