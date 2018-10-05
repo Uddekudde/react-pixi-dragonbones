@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^1.5.0",
     "@types/node": "^10.5.5",
+    "gh-pages": "^2.0.1",
     "normalize.css": "^8.0.0",
     "pixi.js": "^4.8.1",
     "react": "^16.4.1",
@@ -20,7 +21,8 @@
     "start": "tsc && react-scripts start",
     "build": "tsc && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@types/pixi.js": "^4.8.0",
