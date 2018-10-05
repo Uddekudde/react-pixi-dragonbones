@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://uddekudde.github.io/react-pixi-dragonbones/",
   "dependencies": {
     "@material-ui/core": "^1.5.0",
     "@types/node": "^10.5.5",

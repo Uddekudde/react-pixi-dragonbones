@@ -4,10 +4,10 @@ import Button from '@material-ui/core/Button';
 import '../stylesheets/pixiComponent.css';
 import TitleContainer from '../redux-containers/TitleContainer.js';
 
-import HelloDragonBones from '../out/HelloDragonBones.js';
+import DragonBonesScene from '../out/DragonBonesScene.js';
 import skeleton from '../out/resource/hills_ske.json';
 import texJson from "../out/resource/hills_tex.json";
-import texPng from "../out/resource/hills_tex.png"; //Import so webpack puts the png in the build/static/media folder.
+import texPng from "../out/resource/hills_tex.png"; //Import so webpack puts the png in the build/static/media folder. Webpack returns the path to the file.
 
 import changeText from "../actions/animationActions"; //used in mapDispatchToProps
 
@@ -31,7 +31,7 @@ export default class PixiComponent extends React.Component{
     componentDidMount() {
         let component = this;
         //let elHeight = document.getElementById('containerDiv').clientHeight;
-        component.setState({pixiHandler: new HelloDragonBones(this.gameCanvas, skeleton, texJson)});
+        component.setState({pixiHandler: new DragonBonesScene(this.gameCanvas, skeleton, texJson, texPng)});
         component.setState({readyForUpdate: true});
         window.addEventListener("resize", this.resizeRenderer);
     }

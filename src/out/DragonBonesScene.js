@@ -20,12 +20,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /// <reference path="./dragonBones.d.ts" />
 const PIXI = require("pixi.js");
 const PixiBase_js_1 = require("./PixiBase.js");
-class HelloDragonBones extends PixiBase_js_1.default {
-    constructor(canvas, skeleton, texJson) {
+class DragonBonesScene extends PixiBase_js_1.default {
+    constructor(canvas, skeleton, texJson, texPng) {
         super(canvas);
         this.canvas = canvas;
         this.skeleton = skeleton;
         this.texJson = texJson;
+        this.texPng = texPng;
         this.hasText = false;
         this.ARMATURE_DISPLAY_NAME = "armature";
         /*
@@ -39,7 +40,7 @@ class HelloDragonBones extends PixiBase_js_1.default {
         // "src/out/resource/NewProject_ske.json",
         //"src/out/resource/NewProject_tex.json",
         //"src/out/resource/NewProject_tex.png"
-        "/static/media/hills_tex.d150d0de.png");
+        this.texPng);
     }
     checkScale(armatureDisplay) {
         if ((this._renderer.width > 1080) || (this._renderer.height > 1920)) {
@@ -94,7 +95,7 @@ class HelloDragonBones extends PixiBase_js_1.default {
     _onStart() {
         const factory = window.dragonBones.PixiFactory.factory;
         factory.parseDragonBonesData(this.skeleton);
-        factory.parseTextureAtlasData(this.texJson, this._pixiResources["/static/media/hills_tex.d150d0de.png"].texture);
+        factory.parseTextureAtlasData(this.texJson, this._pixiResources[this.texPng].texture);
         const armatureDisplay = factory.buildArmatureDisplay("Armature", "hills");
         armatureDisplay.animation.play("default");
         armatureDisplay.name = this.ARMATURE_DISPLAY_NAME;
@@ -126,4 +127,4 @@ class HelloDragonBones extends PixiBase_js_1.default {
         //this.hasText = true;
     }
 }
-exports.default = HelloDragonBones;
+exports.default = DragonBonesScene;

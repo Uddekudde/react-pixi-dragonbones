@@ -34,7 +34,7 @@ class PixiBase extends PIXI.Container {
     _loadResources() {
         const binaryOptions = { loadType: PIXI.loaders.Resource.LOAD_TYPE.XHR, xhrType: PIXI.loaders.Resource.XHR_RESPONSE_TYPE.BUFFER };
         for (const resource of this._resources) {
-            console.log(resource);
+            //console.log(resource);
             if (resource.indexOf("dbbin") > 0) {
                 PIXI.loader.add(resource, resource, binaryOptions);
             }
@@ -54,7 +54,6 @@ class PixiBase extends PIXI.Container {
             this._startRenderTick(); // Make sure render after dragonBones update.
         });
         PIXI.loader.load();
-        console.log("loaded!");
     }
     createText(string, index) {
         const text = new PIXI.Text(string, { align: "center" });

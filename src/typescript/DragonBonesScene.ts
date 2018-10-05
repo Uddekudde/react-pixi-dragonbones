@@ -18,14 +18,14 @@
 /// <reference path="./dragonBones.d.ts" />
 import * as PIXI from 'pixi.js';
 import PixiBase from './PixiBase.js';
-export default class HelloDragonBones extends PixiBase {
+export default class DragonBonesScene extends PixiBase {
     protected hasText: boolean = false;
     protected readonly ARMATURE_DISPLAY_NAME: string = "armature";
     protected xOffset: number;
     protected yOffset: number;
     protected animationReady: boolean;
 
-    public constructor(private canvas, private skeleton, private texJson) {
+    public constructor(private canvas, private skeleton, private texJson, private texPng) {
         super(canvas);
         /*
         The JSON files are loaded by webpack in PixiComponent.js, and can be passed through the constructor.
@@ -39,7 +39,7 @@ export default class HelloDragonBones extends PixiBase {
            // "src/out/resource/NewProject_ske.json",
             //"src/out/resource/NewProject_tex.json",
             //"src/out/resource/NewProject_tex.png"
-            "/static/media/hills_tex.d150d0de.png"
+            this.texPng
         );
     }
 
@@ -99,7 +99,7 @@ export default class HelloDragonBones extends PixiBase {
     protected _onStart(): void {
         const factory = (window as any).dragonBones.PixiFactory.factory;
         factory.parseDragonBonesData(this.skeleton);
-        factory.parseTextureAtlasData(this.texJson, this._pixiResources["/static/media/hills_tex.d150d0de.png"].texture);
+        factory.parseTextureAtlasData(this.texJson, this._pixiResources[this.texPng].texture);
 
         const armatureDisplay = factory.buildArmatureDisplay("Armature", "hills");
         armatureDisplay.animation.play("default");
