@@ -51,6 +51,29 @@
     font-family: 'Inconsolata', monospace;
 }
 
+.subHeader{
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.divider{
+    flex:1 100px;
+}
+
+.stopper{
+    flex:2 300px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .flexBox{
+      flex-direction: column;
+    }
+    .divider,
+    .stopper{
+        flex: 1 0;
+    }
+}
+
 @keyframes fadeInUp {
     from {
         transform: translate3d(0,40px,0)
