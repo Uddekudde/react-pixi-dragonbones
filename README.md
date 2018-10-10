@@ -6,6 +6,8 @@ That way one can use the great tools in DragonBones to make beautiful animations
 
 For now the app is a personal page, but it could expanded into a gallery with more animated artwork, a game, or any other interactive media.
 
+The project can be viewed [here](https://uddekudde.github.io/react-pixi-dragonbones)
+
 The core technologies used are:
 
 - [React](https://github.com/facebook/react)
