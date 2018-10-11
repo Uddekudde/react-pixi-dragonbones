@@ -90,6 +90,12 @@
     }
 }
 
+@media only screen and (min-height: 900px) {
+    .scrollBox{
+        flex: 2 600px;
+    }
+}
+
 @keyframes fadeInUp {
     from {
         transform: translate3d(0,40px,0)
