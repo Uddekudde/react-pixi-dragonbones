@@ -51,18 +51,28 @@
     font-family: 'Inconsolata', monospace;
 }
 
+.buttonBox{
+    flex: 1 300px;
+}
+
+.scrollBox{
+    flex: 2 600px;
+    overflow: auto;
+}
+
 .subHeader{
     font-weight: bold;
     font-size: 1.3em;
 }
 
 .divider{
-    flex:1 100px;
+    flex: 1 100px;
 }
 
 .stopper{
-    flex:2 300px;
+    flex: 2 300px;
 }
+
 
 @media only screen and (max-width: 1000px) {
     .flexBox{
@@ -71,6 +81,12 @@
     .divider,
     .stopper{
         flex: 1 0;
+    }
+    .buttonBox{
+        flex: 1 100px;
+    }
+    .scrollBox{
+        flex: 2 400px;
     }
 }
 

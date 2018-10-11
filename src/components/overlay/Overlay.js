@@ -34,7 +34,7 @@ export default class Overlay extends React.Component {
                     <div style={{flex:"1"}}/>
                     <div style={{flex:"8"}}>
                         <div style={{display:"flex", flexDirection:"column"}}>
-                            <div style={{display: 'flex', flex:"1 300px", flexDirection:"row"}}>
+                            <div className='buttonBox' style={{display: 'flex', flexDirection:"row"}}>
                                 <div style={{flex:"1 270px" }}/>
                                 <div style={{display: 'flex', flex:"1 270px", flexDirection:'column' }}>
                                     <div style={{flex:"1 270px" }}/>
@@ -47,7 +47,7 @@ export default class Overlay extends React.Component {
                                 </div>
                                 <div style={{flex:"1 270px" }}/>
                             </div>
-                            <div style={{flex:"2 600px", overflow:'auto'}}>
+                            <div className='scrollBox'>
                                 <h1 className="title1 animated fadeInUp" style={{animationDelay: ".5s"}} >
                                     Hello,
                                 </h1>
