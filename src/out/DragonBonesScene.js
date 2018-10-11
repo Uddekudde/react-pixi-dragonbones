@@ -43,17 +43,17 @@ class DragonBonesScene extends PixiBase_js_1.default {
         this.texPng);
     }
     checkScale(armatureDisplay) {
-        if ((this._renderer.width > 1080) || (this._renderer.height > 1920)) {
-            let scaleFactor;
-            if (this._renderer.height >= this._renderer.width) {
-                scaleFactor = this._renderer.height / 1080;
-            }
-            else {
-                scaleFactor = this._renderer.width / 1920;
-            }
-            scaleFactor = (scaleFactor < 1) ? 1 : scaleFactor;
-            armatureDisplay.scale.x = scaleFactor;
-            armatureDisplay.scale.y = scaleFactor;
+        // the animation dimensions are 1920x1080
+        if ((this._renderer.height > 1080) || (this._renderer.width > 1920)) {
+            let xScaleFactor;
+            let yScaleFactor;
+            let finalScaleFactor;
+            xScaleFactor = this._renderer.height / 1080;
+            yScaleFactor = this._renderer.width / 1920;
+            finalScaleFactor = (xScaleFactor > yScaleFactor) ? xScaleFactor : yScaleFactor;
+            finalScaleFactor = (finalScaleFactor < 1) ? 1 : finalScaleFactor;
+            armatureDisplay.scale.x = finalScaleFactor;
+            armatureDisplay.scale.y = finalScaleFactor;
         }
     }
     adjustFocus(armatureDisplay) {
