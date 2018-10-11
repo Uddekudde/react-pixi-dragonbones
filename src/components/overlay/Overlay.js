@@ -60,8 +60,8 @@ export default class Overlay extends React.Component {
                                     Among my individual courses are human-computer interaction, mobile application development and ethical hacking.<br/>
                                 </p>
                                 <p className="description animated fadeInUp" style={{animationDelay: ".9s"}} >
-                                    In my free time I do digital painting and animation in Photoshop. <br/>
-                                    I try to constantly be teaching myself and I'm always looking for new technologies to learn. <br/>
+                                    In my free time I also do digital painting and animation in Photoshop. <br/>
+                                    I'm always looking for new technologies to learn. <br/>
                                 </p>
                                 <div style={{display:'flex'}}>
                                     <div className='flexBox' style={{display:'flex', flex:"2 300px"}}>
