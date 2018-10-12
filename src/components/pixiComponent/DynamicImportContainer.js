@@ -24,11 +24,7 @@ const LoadableComponent = Loadable({
 });
 
 export default class DynamicImportContainer extends React.Component{
-    
-    constructor(props){
-        super(props);
 
-    }
     render(){
         return (
             <div>

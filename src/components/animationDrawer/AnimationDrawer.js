@@ -7,7 +7,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 
-import changeAnimation from "../../actions/animationActions";
+//import changeAnimation from "../../actions/animationActions";
 import {connect} from "react-redux"; //used in mapDispatchToProps
 
 const mapStateToProps = state => {

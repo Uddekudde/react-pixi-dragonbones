@@ -1,6 +1,4 @@
 import React from 'react';
-import { connect } from "react-redux";
-import Button from '@material-ui/core/Button';
 import './pixiComponent.css';
 import TitleContainer from '../title/TitleContainer.js';
 
@@ -9,7 +7,7 @@ import skeleton from '../../out/resource/hills_ske.json';
 import texJson from "../../out/resource/hills_tex.json";
 import texPng from "../../out/resource/hills_tex.png"; //Import so webpack puts the png in the build/static/media folder. Webpack returns the path to the file.
 
-import changeText from "../../actions/animationActions"; //used in mapDispatchToProps
+//import changeText from "../../actions/animationActions";
 
 export default class PixiComponent extends React.Component{
 
@@ -38,7 +36,6 @@ export default class PixiComponent extends React.Component{
 
     componentDidUpdate(){
         if(this.state.readyForUpdate) {
-            //this.state.pixiHandler.changeText(this.props.text);
             this.state.pixiHandler.playAnimation(this.props.animation);
         }
     }
@@ -53,11 +50,6 @@ export default class PixiComponent extends React.Component{
         this.forceUpdate();
     }
 
-    changeTheText = () => {
-        this.props.changeText(this.state.formValue);
-        //this.state.pixiHandler.changeText(this.props.text);
-    };
-
     handleChange(event) {
         this.setState({formValue: event.target.value});
     }
@@ -70,16 +62,6 @@ export default class PixiComponent extends React.Component{
 
         return (
             <div>
-                {/*
-                <div onClick={component.changeTheText} style={{height: '100px', width: '200px', backgroundColor: 'black'}}/>
-                */}
-                {/*<label>
-                    Name:
-                    <input type="text" value={this.state.formValue} onChange={component.handleChange} />
-                </label>
-                <Button variant="contained" color="primary" onClick={component.changeTheText}>
-                    Submit
-                </Button>*/}
                 <div style={{display:"flex", flexDirection: "column"}}>
                     <div className="pixiCanvas" ref={(thisDiv) => {component.gameCanvas = thisDiv}} style={{flex:"1 1 "+height.toString()+"px"}} >
                         <TitleContainer/>

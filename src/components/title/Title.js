@@ -1,6 +1,4 @@
 import React from 'react';
-import {connect} from "react-redux";
-import overlayActive from '../../reducers/overlayReducer.js';
 import './title.css';
 
 export default class Title extends React.Component {
