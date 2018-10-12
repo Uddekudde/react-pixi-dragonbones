@@ -1,8 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /// <reference path="./dragonBones.d.ts" />
-const PIXI = require("pixi.js");
-class PixiBase extends PIXI.Container {
+import * as PIXI from 'pixi.js';
+export default class PixiBase extends PIXI.Container {
     constructor(canvas) {
         super();
         this._background = new PIXI.Sprite(PIXI.Texture.EMPTY);
@@ -73,4 +71,3 @@ class PixiBase extends PIXI.Container {
         return this._renderer.height;
     }
 }
-exports.default = PixiBase;

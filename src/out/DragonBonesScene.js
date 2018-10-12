@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * How to use
  * 1. Load data.
@@ -18,9 +16,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
  *    addChild(armatureDisplay);
  */
 /// <reference path="./dragonBones.d.ts" />
-const PIXI = require("pixi.js");
-const PixiBase_js_1 = require("./PixiBase.js");
-class DragonBonesScene extends PixiBase_js_1.default {
+import * as PIXI from 'pixi.js';
+import PixiBase from './PixiBase.js';
+export default class DragonBonesScene extends PixiBase {
     constructor(canvas, skeleton, texJson, texPng) {
         super(canvas);
         this.canvas = canvas;
@@ -127,4 +125,3 @@ class DragonBonesScene extends PixiBase_js_1.default {
         //this.hasText = true;
     }
 }
-exports.default = DragonBonesScene;
