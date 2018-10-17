@@ -1,5 +1,5 @@
 import React from 'react';
-import './pixiComponent.css';
+import './pixiComponent.scss';
 import TitleContainer from '../title/TitleContainer.js';
 
 import DragonBonesScene from '../../out/DragonBonesScene.js';
@@ -14,7 +14,6 @@ export default class PixiComponent extends React.Component{
 
     constructor(props) {
         super(props);
-        console.log(this.props.text);
         this.gameCanvas = null;
 
         this.handleChange = this.handleChange.bind(this);
@@ -44,8 +43,8 @@ export default class PixiComponent extends React.Component{
         window.removeEventListener("resize", this.resizeRenderer);
     }
 
-    resizeRenderer = () => {
-        console.log(this.gameCanvas.clientHeight+"  "+this.gameCanvas.clientWidth+" canvas");
+    resizeRenderer()  {
+        //console.log(this.gameCanvas.clientHeight+"  "+this.gameCanvas.clientWidth+" canvas");
         this.state.pixiHandler.resizeRenderer(this.gameCanvas.clientWidth, window.innerHeight -3);
         this.forceUpdate();
     }
