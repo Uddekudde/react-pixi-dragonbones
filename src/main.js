@@ -7,7 +7,6 @@ import TopBarContainer from './components/topBar/TopBarContainer.js';
 
 export default class Main extends React.Component {
 
-
     render(){
         return (
             <div>

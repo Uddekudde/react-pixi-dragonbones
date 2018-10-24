@@ -7,26 +7,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 
-//import changeAnimation from "../../actions/animationActions";
-import {connect} from "react-redux"; //used in mapDispatchToProps
-
-const mapStateToProps = state => {
-    return {
-        animation: state.animation.animationName
-    }
-};
-
-const mapDispatchToProps = dispatch => {
-    return {
-        changeAnimation: (animationName) =>
-            dispatch({
-                type: "CHANGE_ANIMATION",
-                payload: animationName,
-            })
-    }
-};
-
-class AnimationDrawer extends React.Component {
+export default class AnimationDrawer extends React.Component {
 
     constructor(props) {
         super(props);
@@ -61,8 +42,3 @@ class AnimationDrawer extends React.Component {
         )
     }
 }
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(AnimationDrawer);

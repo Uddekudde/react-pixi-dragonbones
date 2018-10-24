@@ -1,22 +1,21 @@
 import { connect } from "react-redux";
-import PixiComponent from './PixiComponent.js';
-import { changeText } from '../../actions/animationActions.js';
+import AnimationDrawer from './AnimationDrawer.js';
+import { changeAnimation } from "../../actions/animationActions";
 
 const mapStateToProps = state => {
     return {
-        text: state.animation.animationText,
         animation: state.animation.animationName
     }
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        changeText: (text) =>
-            dispatch(changeText(text))
+        changeAnimation: (animationName) =>
+            dispatch( changeAnimation(animationName) )
     }
 };
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(PixiComponent);
+)(AnimationDrawer);

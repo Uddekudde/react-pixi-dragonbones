@@ -1,5 +1,7 @@
 import { connect } from "react-redux";
 import TopBar from './TopBar.js';
+import { overlayActive } from '../../actions/overlayActions.js';
+
 
 const mapStateToProps = state => {
     return {
@@ -10,10 +12,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         overlayActive: (isActive) =>
-            dispatch({
-                type: "OVERLAY_ACTIVE",
-                payload: isActive,
-            })
+            dispatch(overlayActive(isActive))
     }
 };
 
