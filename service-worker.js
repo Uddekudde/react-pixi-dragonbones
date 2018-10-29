@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/react-pixi-dragonbones/precache-manifest.6b09536e9f393bf47a5f1c9276608e4b.js"
+  "/react-pixi-dragonbones/precache-manifest.89b96679070e4032f5b4a7c23ef364ff.js"
 );
 
 workbox.clientsClaim();
