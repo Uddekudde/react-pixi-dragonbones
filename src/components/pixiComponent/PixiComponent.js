@@ -43,7 +43,7 @@ export default class PixiComponent extends React.Component{
         window.removeEventListener("resize", this.resizeRenderer);
     }
 
-    resizeRenderer()  {
+    resizeRenderer = () =>  {
         //console.log(this.gameCanvas.clientHeight+"  "+this.gameCanvas.clientWidth+" canvas");
         this.state.pixiHandler.resizeRenderer(this.gameCanvas.clientWidth, window.innerHeight -3);
         this.forceUpdate();
