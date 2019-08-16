@@ -1,4 +1,4 @@
-/// <reference path="./dragonBones.d.ts" />
+/**/// <reference path="./dragonBones.d.ts" />**/
 import * as PIXI from 'pixi.js';
 export default class PixiBase extends PIXI.Container {
     constructor(canvas) {

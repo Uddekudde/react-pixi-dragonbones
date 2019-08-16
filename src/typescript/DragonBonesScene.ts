@@ -21,11 +21,11 @@ import PixiBase from './PixiBase.js';
 export default class DragonBonesScene extends PixiBase {
     protected hasText: boolean = false;
     protected readonly ARMATURE_DISPLAY_NAME: string = "armature";
-    protected xOffset: number;
-    protected yOffset: number;
-    protected animationReady: boolean;
+    protected xOffset: number = 0;
+    protected yOffset: number = 0;
+    protected animationReady: boolean = false;
 
-    public constructor(private canvas, private skeleton, private texJson, private texPng) {
+    public constructor(private canvas: any, private skeleton: any, private texJson: any, private texPng: any) {
         super(canvas);
         /*
         The JSON files are loaded by webpack in PixiComponent.js, and can be passed through the constructor.
@@ -43,7 +43,7 @@ export default class DragonBonesScene extends PixiBase {
         );
     }
 
-    checkScale(armatureDisplay){
+    checkScale(armatureDisplay: any){
         // the animation dimensions are 1920x1080
         if ((this._renderer.height > 1080) || (this._renderer.width > 1920)) {
             let xScaleFactor;
@@ -59,7 +59,7 @@ export default class DragonBonesScene extends PixiBase {
         }
     }
 
-    adjustFocus(armatureDisplay){
+    adjustFocus(armatureDisplay: any){
         let focusCorrectionX;
         let focusCorrectionY;
         if((this._renderer.width / this._renderer.height) > 0.7) {
@@ -74,7 +74,7 @@ export default class DragonBonesScene extends PixiBase {
         armatureDisplay.y = (this._renderer.height / 2) - this.yOffset - focusCorrectionY;
     }
 
-    changeText(text){
+    changeText(text: string){
         if(this.hasText) {
             let childToRemove = this.getChildByName(this.TEXT_NAME);
             this.removeChildAt(this.getChildIndex(childToRemove));
@@ -84,14 +84,14 @@ export default class DragonBonesScene extends PixiBase {
         this.hasText = true;
     }
 
-    playAnimation(animationName){
+    playAnimation(animationName: string){
         if(this.animationReady) {
             let armatureDisplay = this.getChildByName(this.ARMATURE_DISPLAY_NAME) as dragonBones.PixiArmatureDisplay;
             armatureDisplay.animation.play(animationName);
         }
     }
 
-    resizeRenderer(width, height){
+    resizeRenderer(width: number, height: number){
         this._renderer.resize(width, height);
         let armatureDisplay = this.getChildByName(this.ARMATURE_DISPLAY_NAME);
         this.adjustFocus(armatureDisplay);

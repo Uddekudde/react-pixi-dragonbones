@@ -14,9 +14,9 @@
     "react-loadable": "^5.5.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.3",
+    "react-scripts": "2.1.8",
     "redux": "^4.0.0",
-    "typescript": "^2.9.2"
+    "typescript": "^3.5.3"
   },
   "scripts": {
     "start": "tsc && react-scripts start",

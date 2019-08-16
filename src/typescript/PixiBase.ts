@@ -2,13 +2,13 @@
 import * as PIXI from 'pixi.js';
 export default abstract class PixiBase extends PIXI.Container {
     //private static BACKGROUND_URL: string = "src/out/resource/background.png";
-    protected readonly _renderer;
+    protected readonly _renderer : any;
     protected readonly _background: PIXI.Sprite = new PIXI.Sprite(PIXI.Texture.EMPTY);
-    protected readonly _resources: string[] = [];
-    protected _pixiResources: dragonBones.Map<PIXI.loaders.Resource>;
+    protected readonly _resources: string[] | any;
+    protected _pixiResources: dragonBones.Map<PIXI.loaders.Resource> | any;
     protected readonly TEXT_NAME: string = "text";
 
-    public constructor(canvas) {
+    public constructor(canvas: any) {
         super();
         this._renderer = new PIXI.WebGLRenderer(canvas.clientWidth, canvas.clientHeight);
         this._renderer.backgroundColor = 0x000000;

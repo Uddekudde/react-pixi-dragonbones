@@ -1,0 +1,5 @@
+
+> my-app@0.1.0 start G:\programmering\react-tutorial\my-app
+> tsc && react-scripts start
+
+src/out/resource/hills_ske.json(1,1): error TS1208: Cannot compile namespaces when the '--isolatedModules' flag is provided.

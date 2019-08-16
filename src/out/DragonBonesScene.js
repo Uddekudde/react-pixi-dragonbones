@@ -15,7 +15,7 @@
  * 5. Add armature to stage.
  *    addChild(armatureDisplay);
  */
-/// <reference path="./dragonBones.d.ts" />
+/**/// <reference path="./dragonBones.d.ts" />**/
 import * as PIXI from 'pixi.js';
 import PixiBase from './PixiBase.js';
 export default class DragonBonesScene extends PixiBase {
