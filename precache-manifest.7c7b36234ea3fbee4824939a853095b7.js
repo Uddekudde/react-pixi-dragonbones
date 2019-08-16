@@ -8,8 +8,8 @@ self.__precacheManifest = [
     "url": "/react-pixi-dragonbones/static/js/runtime~main.464ae383.js"
   },
   {
-    "revision": "0c21b9faffeff848733c",
-    "url": "/react-pixi-dragonbones/static/js/main.0c21b9fa.chunk.js"
+    "revision": "0127efdb6c9ba0419ea2",
+    "url": "/react-pixi-dragonbones/static/js/main.0127efdb.chunk.js"
   },
   {
     "revision": "2ee745f4b7d570dd0150",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/react-pixi-dragonbones/static/js/1.bf129c72.chunk.js"
   },
   {
-    "revision": "0c21b9faffeff848733c",
+    "revision": "0127efdb6c9ba0419ea2",
     "url": "/react-pixi-dragonbones/static/css/main.5e988a6f.chunk.css"
   },
   {
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/react-pixi-dragonbones/static/css/1.bae97379.chunk.css"
   },
   {
-    "revision": "43488847383b7168d85dbedf1f9333d8",
+    "revision": "8dce7a78b752aef5ca1a40ae7c5883a2",
     "url": "/react-pixi-dragonbones/index.html"
   }
 ];

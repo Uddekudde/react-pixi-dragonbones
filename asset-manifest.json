@@ -1,7 +1,7 @@
 {
   "main.css": "/react-pixi-dragonbones/static/css/main.5e988a6f.chunk.css",
-  "main.js": "/react-pixi-dragonbones/static/js/main.0c21b9fa.chunk.js",
-  "main.js.map": "/react-pixi-dragonbones/static/js/main.0c21b9fa.chunk.js.map",
+  "main.js": "/react-pixi-dragonbones/static/js/main.0127efdb.chunk.js",
+  "main.js.map": "/react-pixi-dragonbones/static/js/main.0127efdb.chunk.js.map",
   "static/css/1.bae97379.chunk.css": "/react-pixi-dragonbones/static/css/1.bae97379.chunk.css",
   "static/js/1.bf129c72.chunk.js": "/react-pixi-dragonbones/static/js/1.bf129c72.chunk.js",
   "static/js/1.bf129c72.chunk.js.map": "/react-pixi-dragonbones/static/js/1.bf129c72.chunk.js.map",
@@ -12,11 +12,11 @@
   "static/js/3.2ee745f4.chunk.js.map": "/react-pixi-dragonbones/static/js/3.2ee745f4.chunk.js.map",
   "runtime~main.js": "/react-pixi-dragonbones/static/js/runtime~main.464ae383.js",
   "runtime~main.js.map": "/react-pixi-dragonbones/static/js/runtime~main.464ae383.js.map",
-  "static/css/2.c51f7476.chunk.css.map": "/react-pixi-dragonbones/static/css/2.c51f7476.chunk.css.map",
+  "static/css/1.bae97379.chunk.css.map": "/react-pixi-dragonbones/static/css/1.bae97379.chunk.css.map",
   "static/media/hills_tex.png": "/react-pixi-dragonbones/static/media/hills_tex.d150d0de.png",
   "static/css/main.5e988a6f.chunk.css.map": "/react-pixi-dragonbones/static/css/main.5e988a6f.chunk.css.map",
-  "static/css/1.bae97379.chunk.css.map": "/react-pixi-dragonbones/static/css/1.bae97379.chunk.css.map",
+  "static/css/2.c51f7476.chunk.css.map": "/react-pixi-dragonbones/static/css/2.c51f7476.chunk.css.map",
   "index.html": "/react-pixi-dragonbones/index.html",
-  "precache-manifest.89b96679070e4032f5b4a7c23ef364ff.js": "/react-pixi-dragonbones/precache-manifest.89b96679070e4032f5b4a7c23ef364ff.js",
+  "precache-manifest.7c7b36234ea3fbee4824939a853095b7.js": "/react-pixi-dragonbones/precache-manifest.7c7b36234ea3fbee4824939a853095b7.js",
   "service-worker.js": "/react-pixi-dragonbones/service-worker.js"
 }
