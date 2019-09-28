@@ -15,7 +15,7 @@
  * 5. Add armature to stage.
  *    addChild(armatureDisplay);
  */
-/**/// <reference path="./dragonBones.d.ts" />**/
+/// <reference path="./dragonBones.d.ts" />
 import * as PIXI from 'pixi.js';
 import PixiBase from './PixiBase.js';
 export default class DragonBonesScene extends PixiBase {
@@ -27,6 +27,12 @@ export default class DragonBonesScene extends PixiBase {
         this.texPng = texPng;
         this.hasText = false;
         this.ARMATURE_DISPLAY_NAME = "armature";
+        this.xOffset = 0;
+        this.yOffset = 0;
+        this.animationReady = false;
+        this.dragonbonesName = "parallaxCove";
+        this.armatureName = "Armature";
+        this.animationName = "animtion0";
         /*
         The JSON files are loaded by webpack in PixiComponent.js, and can be passed through the constructor.
         The texture atlas data aka tex.png are placed by webpack as is in the directory /static/media. From there they can be loaded by the Pixi loader given the url below.
@@ -94,8 +100,8 @@ export default class DragonBonesScene extends PixiBase {
         const factory = window.dragonBones.PixiFactory.factory;
         factory.parseDragonBonesData(this.skeleton);
         factory.parseTextureAtlasData(this.texJson, this._pixiResources[this.texPng].texture);
-        const armatureDisplay = factory.buildArmatureDisplay("Armature", "hills");
-        armatureDisplay.animation.play("default");
+        const armatureDisplay = factory.buildArmatureDisplay(this.armatureName, this.dragonbonesName);
+        armatureDisplay.animation.play(this.animationName);
         armatureDisplay.name = this.ARMATURE_DISPLAY_NAME;
         this.animationReady = true;
         armatureDisplay.anchor.x = 0;

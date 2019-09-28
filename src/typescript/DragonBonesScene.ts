@@ -24,6 +24,10 @@ export default class DragonBonesScene extends PixiBase {
     protected xOffset: number = 0;
     protected yOffset: number = 0;
     protected animationReady: boolean = false;
+    protected readonly dragonbonesName: string = "parallaxCove";
+    protected readonly armatureName: string = "Armature";
+    protected readonly animationName: string = "animtion0";
+
 
     public constructor(private canvas: any, private skeleton: any, private texJson: any, private texPng: any) {
         super(canvas);
@@ -103,8 +107,8 @@ export default class DragonBonesScene extends PixiBase {
         factory.parseDragonBonesData(this.skeleton);
         factory.parseTextureAtlasData(this.texJson, this._pixiResources[this.texPng].texture);
 
-        const armatureDisplay = factory.buildArmatureDisplay("Armature", "hills");
-        armatureDisplay.animation.play("default");
+        const armatureDisplay = factory.buildArmatureDisplay(this.armatureName, this.dragonbonesName);
+        armatureDisplay.animation.play(this.animationName);
 
         armatureDisplay.name = this.ARMATURE_DISPLAY_NAME;
         this.animationReady = true;

@@ -3,9 +3,9 @@ import './pixiComponent.scss';
 import TitleContainer from '../title/TitleContainer.js';
 
 import DragonBonesScene from '../../out/DragonBonesScene.js';
-import skeleton from '../../out/resource/hills_ske.json';
-import texJson from "../../out/resource/hills_tex.json";
-import texPng from "../../out/resource/hills_tex.png"; //Import so webpack puts the png in the build/static/media folder. Webpack returns the path to the file.
+import skeleton from '../../out/resource/parallaxCove_ske.json';
+import texJson from "../../out/resource/parallaxCove_tex.json";
+import texPng from "../../out/resource/parallaxCove_tex.png"; //Import so webpack puts the png in the build/static/media folder. Webpack returns the path to the file.
 
 //import changeText from "../../actions/animationActions";
 

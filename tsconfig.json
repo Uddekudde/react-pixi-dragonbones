@@ -25,6 +25,6 @@
     "src/out"
   ],
   "include": [
-    "src"
+    "src/typescript"
   ]
 }

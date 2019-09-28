@@ -1,13 +1,13 @@
-/**/// <reference path="./dragonBones.d.ts" />**/
+/// <reference path="./dragonBones.d.ts" />
 import * as PIXI from 'pixi.js';
 export default class PixiBase extends PIXI.Container {
     constructor(canvas) {
         super();
         this._background = new PIXI.Sprite(PIXI.Texture.EMPTY);
-        this._resources = [];
         this.TEXT_NAME = "text";
         this._renderer = new PIXI.WebGLRenderer(canvas.clientWidth, canvas.clientHeight);
         this._renderer.backgroundColor = 0x000000;
+        this._resources = [];
         //this._resources.push(BaseDemo.BACKGROUND_URL);
         canvas.appendChild(this._renderer.view);
         //
