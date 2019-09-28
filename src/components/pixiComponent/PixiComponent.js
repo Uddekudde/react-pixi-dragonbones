@@ -45,7 +45,7 @@ export default class PixiComponent extends React.Component{
 
     resizeRenderer = () =>  {
         //console.log(this.gameCanvas.clientHeight+"  "+this.gameCanvas.clientWidth+" canvas");
-        this.state.pixiHandler.resizeRenderer(this.gameCanvas.clientWidth, window.innerHeight -3);
+        this.state.pixiHandler.resizeRenderer(this.gameCanvas.clientWidth, window.innerHeight);
         this.forceUpdate();
     }
 
@@ -55,14 +55,12 @@ export default class PixiComponent extends React.Component{
 
     render(){
         let component = this;
-        //let height = window.innerHeight -103;
-        //let height = window.innerHeight -67;
-        let height = window.innerHeight -3;
+        let height = window.innerHeight;
 
         return (
             <div>
                 <div style={{display:"flex", flexDirection: "column"}}>
-                    <div className="pixiCanvas" ref={(thisDiv) => {component.gameCanvas = thisDiv}} style={{flex:"1 1 "+height.toString()+"px"}} >
+                    <div className="pixiCanvas" ref={(thisDiv) => {component.gameCanvas = thisDiv}} style={{height: height}} >
                         <TitleContainer/>
                     </div>
                 </div>
