@@ -1,6 +1,6 @@
 export default function animationReducer(state={
     animationText: "roffelkartoffel",
-    animationName: "default"
+    animationName: "animtion0"
 }, action){
 
     switch (action.type) {

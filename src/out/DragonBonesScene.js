@@ -96,6 +96,24 @@ export default class DragonBonesScene extends PixiBase {
         this.adjustFocus(armatureDisplay);
         this.checkScale(armatureDisplay);
     }
+    parallax(pageX, pageY) {
+        let mouseX = pageX - 945;
+        let mouseY = pageY - 550;
+        let armatureDisplay = this.getChildByName(this.ARMATURE_DISPLAY_NAME);
+        let near = armatureDisplay.armature.getBone("near");
+        let middle = armatureDisplay.armature.getBone("middle");
+        let far = armatureDisplay.armature.getBone("far");
+        let bgRatio = 0.01125;
+        let midRatio = 0.05;
+        let nearRatio = 0.2;
+        far.offset.x = mouseX * bgRatio;
+        far.offset.y = mouseY * bgRatio;
+        near.offset.x = mouseX * nearRatio;
+        near.offset.y = mouseY * nearRatio;
+        ;
+        middle.offset.x = mouseX * midRatio;
+        middle.offset.y = mouseY * midRatio;
+    }
     _onStart() {
         const factory = window.dragonBones.PixiFactory.factory;
         factory.parseDragonBonesData(this.skeleton);

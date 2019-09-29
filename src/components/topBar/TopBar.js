@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
-import AnimationDrawerContainer from '../animationDrawer/AnimationDrawerContainer.js';
+//import AnimationDrawerContainer from '../animationDrawer/AnimationDrawerContainer.js';
 
 export default class TopBar extends React.Component {
 
@@ -20,7 +20,7 @@ export default class TopBar extends React.Component {
                     </Typography>
                     <div style={{flex: '1 100px'}}>
                     </div>
-                    <AnimationDrawerContainer/>
+                    {/*<AnimationDrawerContainer/>*/}
                 </Toolbar>
             </AppBar>
         )

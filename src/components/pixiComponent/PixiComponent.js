@@ -20,7 +20,7 @@ export default class PixiComponent extends React.Component{
 
         this.state = {
             pixiHandler: [],
-            //readyForUpdate: false,
+            readyForUpdate: false,
             formValue: []
         }
     }
@@ -31,6 +31,13 @@ export default class PixiComponent extends React.Component{
         component.setState({pixiHandler: new DragonBonesScene(this.gameCanvas, skeleton, texJson, texPng)});
         component.setState({readyForUpdate: true});
         window.addEventListener("resize", this.resizeRenderer);
+        window.addEventListener('mousemove', this.mouseHandler);
+    }
+
+    mouseHandler = (e) => {
+        let pageX = e.pageX;
+        let pageY = e.pageY;
+        this.state.pixiHandler.parallax(pageX, pageY);
     }
 
     componentDidUpdate(){
@@ -41,6 +48,7 @@ export default class PixiComponent extends React.Component{
 
     componentWillUnmount() {
         window.removeEventListener("resize", this.resizeRenderer);
+        window.removeEventListener("resize", this.mouseHandler);
     }
 
     resizeRenderer = () =>  {
