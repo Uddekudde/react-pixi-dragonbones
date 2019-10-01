@@ -103,6 +103,8 @@ export default class DragonBonesScene extends PixiBase {
         let near = armatureDisplay.armature.getBone("near");
         let middle = armatureDisplay.armature.getBone("middle");
         let far = armatureDisplay.armature.getBone("far");
+        mouseX = mouseX * 0.7;
+        mouseY = mouseY * 0.7;
         let bgRatio = 0.01125;
         let midRatio = 0.05;
         let nearRatio = 0.2;
