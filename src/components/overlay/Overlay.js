@@ -37,13 +37,13 @@ export default class Overlay extends React.Component {
                             <div className='buttonBox' style={{display: 'flex', flexDirection:"row"}}>
                                 <div style={{flex:"1 270px" }}/>
                                 <div style={{display: 'flex', flex:"1 270px", flexDirection:'column' }}>
-                                    <div style={{flex:"1 135px" }}/>
+                                    <div style={{flex:"1 70px" }}/>
                                     <div className="closeBtn animated fadeInUp" style={{marginLeft:'auto',marginRight:'auto'}}>
                                         <Button component={Link} style={{color: 'white'}} to='/' onClick={() => this.props.overlayActive('false')}>
                                             Close
                                         </Button>
                                     </div>
-                                    <div style={{flex:"1 135px" }}/>
+                                    <div style={{flex:"1 70px" }}/>
                                 </div>
                                 <div style={{flex:"1 270px" }}/>
                             </div>
