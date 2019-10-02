@@ -64,15 +64,15 @@ export default class DragonBonesScene extends PixiBase {
     }
 
     adjustFocus(armatureDisplay: any){
-        let focusCorrectionX;
-        let focusCorrectionY;
+        let focusCorrectionX = 0;
+        let focusCorrectionY = 0;
         if((this._renderer.width / this._renderer.height) > 0.7) {
             focusCorrectionX = (this._renderer.width < 1300) ? 300 : 0;
             focusCorrectionY = (this._renderer.height < 800) ? 100 : 0;
         } else {
-            let offsetCompensation = (this._renderer.width < 560) ? (this.xOffset / 4) : 0;
+            /**let offsetCompensation = (this._renderer.width < 560) ? (this.xOffset / 4) : 0;
             focusCorrectionX = 600 + offsetCompensation;
-            focusCorrectionY = 0;
+            focusCorrectionY = 0;**/
         }
         armatureDisplay.x = (this._renderer.width / 2) - this.xOffset + focusCorrectionX;
         armatureDisplay.y = (this._renderer.height / 2) - this.yOffset - focusCorrectionY;
@@ -122,7 +122,7 @@ export default class DragonBonesScene extends PixiBase {
         far.offset.y = mouseY*bgRatio;
 
         near.offset.x = mouseX*nearRatio;
-        near.offset.y = mouseY*nearRatio;;
+        near.offset.y = mouseY*nearRatio;
 
         middle.offset.x = mouseX*midRatio;
         middle.offset.y = mouseY*midRatio;
