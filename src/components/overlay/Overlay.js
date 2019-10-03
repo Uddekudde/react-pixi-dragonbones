@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Redirect  } from 'react-router-dom'
 import Button from '@material-ui/core/Button';
 
 import './overlay.scss';
@@ -14,22 +14,30 @@ export default class Overlay extends React.Component {
 
         this.props.overlayActive('true');
 
-
         this.state = {
-            className: this.INACTIVE_NAME
+            className: this.INACTIVE_NAME,
+            redirect: false,
+            animation: "fadeIn"
         };
-
-        setTimeout(() => {
-            this.setState({
-                className: this.ACTIVE_NAME
-            });
-        }, 50);
     }
 
+    handleClick = (e) =>{
+        this.props.overlayActive('false');
+        this.setState({animation: 'fadeOut'});
+        setTimeout(() => {
+            this.setState({
+                redirect: true
+            });
+        }, 2000);
+    };
+
     render(){
+        if (this.state.redirect) {
+            return <Redirect push to="/" />;
+        }
+
         return(
-            <div className={ this.state.className + ' animated fadeIn' } >
-                {/*<Link className="closeBtn animated animatedFadeInUp fadeInUp" style={{animationDelay: ".5s"}}  to='/' >CLOSE</Link>*/}
+            <div className={ this.state.className + ' animated ' + this.state.animation } >
                 <div style={{display: "flex", flexDirection:"row"}}>
                     <div style={{flex:"1"}}/>
                     <div style={{flex:"8"}}>
@@ -39,7 +47,7 @@ export default class Overlay extends React.Component {
                                 <div style={{display: 'flex', flex:"1 270px", flexDirection:'column' }}>
                                     <div style={{flex:"1 70px" }}/>
                                     <div className="closeBtn animated fadeInUp" style={{marginLeft:'auto',marginRight:'auto'}}>
-                                        <Button component={Link} style={{color: 'white'}} to='/' onClick={() => this.props.overlayActive('false')}>
+                                        <Button style={{color: 'white'}} to='/' onClick={this.handleClick}>
                                             Close
                                         </Button>
                                     </div>

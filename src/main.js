@@ -10,7 +10,6 @@ export default class Main extends React.Component {
     render(){
         return (
             <div>
-                {/*<Header/>*/}
                 <TopBarContainer/>
                 <Switch>
                     <Route exact path='/' component={DynamicImportContainer} />

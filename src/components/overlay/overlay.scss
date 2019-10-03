@@ -3,7 +3,7 @@ $textColor: #dddddd;
 
 .overlay-vis {
     position: fixed; /* Sit on top of the page content */
-    display: block; /* Hidden by default */
+    //display: block; /* Hidden by default */
     width: 100%; /* Full width (cover the whole page) */
     height: 100%; /* Full height (cover the whole page) */
     top: 0;
@@ -32,6 +32,33 @@ $textColor: #dddddd;
         opacity: 1
     }
 }
+
+@keyframes fadeOut {
+    from {
+
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    from {
+
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+.fadeOut {
+    opacity: 1;
+    animation-name: fadeOut;
+    -webkit-animation-name: fadeOut;
+}
+
 
 .fadeIn {
     opacity: 0;
