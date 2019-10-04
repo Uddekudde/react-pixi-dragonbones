@@ -9,13 +9,11 @@ export default class Overlay extends React.Component {
     constructor(props){
         super(props);
 
-        this.ACTIVE_NAME = "overlay-vis";
-        this.INACTIVE_NAME = "overlay-vis";
+        this.className = "overlay-vis";
 
         this.props.overlayActive('true');
 
         this.state = {
-            className: this.INACTIVE_NAME,
             redirect: false,
             animation: "fadeIn"
         };
@@ -28,7 +26,7 @@ export default class Overlay extends React.Component {
             this.setState({
                 redirect: true
             });
-        }, 2000);
+        }, 1500);
     };
 
     render(){
@@ -37,7 +35,7 @@ export default class Overlay extends React.Component {
         }
 
         return(
-            <div className={ this.state.className + ' animated ' + this.state.animation } >
+            <div className={ this.className + ' animated ' + this.state.animation } >
                 <div style={{display: "flex", flexDirection:"row"}}>
                     <div style={{flex:"1"}}/>
                     <div style={{flex:"8"}}>
@@ -63,12 +61,12 @@ export default class Overlay extends React.Component {
                                     Is it me you're looking for?
                                 </h2>
                                 <p className="description animated fadeInUp" style={{animationDelay: ".9s"}} >
-                                    I'm a Stockholm based student currently finishing my bachelor in software engineering at KTH Kista.<br/>
+                                    I'm a Stockholm based recent graduate from the computer engineering programme at KTH Kista.<br/>
                                     My main interest is web development, specifically React apps but I have knowledge in many areas in IT.<br/>
                                     Among my individual courses are human-computer interaction, mobile application development and ethical hacking.<br/>
                                 </p>
                                 <p className="description animated fadeInUp" style={{animationDelay: ".9s"}} >
-                                    In my free time I also do digital painting and animation in Photoshop. <br/>
+                                    In my free time I also do digital painting and animation. <br/>
                                     I'm always looking for new technologies to learn. <br/>
                                 </p>
                                 <div style={{display:'flex'}}>
@@ -78,8 +76,9 @@ export default class Overlay extends React.Component {
                                                 Experience
                                             </p>
                                             <p className="description animated fadeInUp" style={{animationDelay: ".9s"}} >
-                                                As part of my bachelor's thesis I designed and built a React app for visualizing troubleshooting data for a company, Mavenoid.<br/>
-                                                I also built the backend API for the app.
+                                                I have a Bachelor of Science degree in computer engineering (Högskoleingenjör datateknik) from KTH.<br/>
+                                                As part of my bachelor's thesis I worked on a React app for visualizing troubleshooting data for Mavenoid, a tech startup.<br/>
+                                                I also worked on the backend API for the app.
                                             </p>
                                         </div>
                                         <div className='divider' />
