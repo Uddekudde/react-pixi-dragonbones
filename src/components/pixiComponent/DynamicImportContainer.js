@@ -6,10 +6,12 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 function Loading(props) {
     if (props.pastDelay){
         return (
-            <div>
-                <LinearProgress />
-                <br />
-                <LinearProgress color="secondary" />
+            <div style={{display: "flex", flexDirection: "column", background:"black"}}>
+                <div style={{flex:"2 500px"}}>
+                </div>
+                <LinearProgress/>
+                <div style={{flex:"2 500px"}}>
+                </div>
             </div>
         );
     } else {
@@ -28,7 +30,7 @@ export default class DynamicImportContainer extends React.Component{
     render(){
         return (
             <div>
-            <LoadableComponent/>
+                <LoadableComponent/>
             </div>
         );
     }

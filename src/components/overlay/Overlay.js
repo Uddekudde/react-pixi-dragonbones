@@ -95,7 +95,7 @@ export default class Overlay extends React.Component {
                                     <div className='stopper'/>
                                 </div>
                                 <p className="description animated fadeInUp" style={{animationDelay: ".9s"}} >
-                                    You can reach me at tudd@kth.se or on <a style={{color:'white'}} href='https://github.com/Uddekudde'>GitHub</a> or <a style={{color:'white'}} href='https://www.linkedin.com/in/tobias-udd-783530171/'>LinkedIn</a>
+                                    You can reach me at tudd@kth.se or <a style={{color:'white'}} href='https://www.linkedin.com/in/tobias-udd-783530171/'>LinkedIn</a>
                                 </p>
                                 <div style={{height:'3em'}}/>
                             </div>
