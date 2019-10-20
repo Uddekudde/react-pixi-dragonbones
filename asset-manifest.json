@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/react-pixi-dragonbones/static/css/main.860317d1.chunk.css",
-    "main.js": "/react-pixi-dragonbones/static/js/main.b3dda6ad.chunk.js",
-    "main.js.map": "/react-pixi-dragonbones/static/js/main.b3dda6ad.chunk.js.map",
-    "runtime-main.js": "/react-pixi-dragonbones/static/js/runtime-main.bdcb8950.js",
-    "runtime-main.js.map": "/react-pixi-dragonbones/static/js/runtime-main.bdcb8950.js.map",
-    "static/js/2.ca5cea8d.chunk.js": "/react-pixi-dragonbones/static/js/2.ca5cea8d.chunk.js",
-    "static/js/2.ca5cea8d.chunk.js.map": "/react-pixi-dragonbones/static/js/2.ca5cea8d.chunk.js.map",
+    "main.js": "/react-pixi-dragonbones/static/js/main.31c2766a.chunk.js",
+    "main.js.map": "/react-pixi-dragonbones/static/js/main.31c2766a.chunk.js.map",
+    "runtime-main.js": "/react-pixi-dragonbones/static/js/runtime-main.5a508f83.js",
+    "runtime-main.js.map": "/react-pixi-dragonbones/static/js/runtime-main.5a508f83.js.map",
+    "static/js/2.b3f85c56.chunk.js": "/react-pixi-dragonbones/static/js/2.b3f85c56.chunk.js",
+    "static/js/2.b3f85c56.chunk.js.map": "/react-pixi-dragonbones/static/js/2.b3f85c56.chunk.js.map",
     "static/css/3.4cf5f81b.chunk.css": "/react-pixi-dragonbones/static/css/3.4cf5f81b.chunk.css",
-    "static/js/3.c60eba57.chunk.js": "/react-pixi-dragonbones/static/js/3.c60eba57.chunk.js",
-    "static/js/3.c60eba57.chunk.js.map": "/react-pixi-dragonbones/static/js/3.c60eba57.chunk.js.map",
+    "static/js/3.2213fdaf.chunk.js": "/react-pixi-dragonbones/static/js/3.2213fdaf.chunk.js",
+    "static/js/3.2213fdaf.chunk.js.map": "/react-pixi-dragonbones/static/js/3.2213fdaf.chunk.js.map",
     "static/css/4.68b74e9f.chunk.css": "/react-pixi-dragonbones/static/css/4.68b74e9f.chunk.css",
-    "static/js/4.6e13796c.chunk.js": "/react-pixi-dragonbones/static/js/4.6e13796c.chunk.js",
-    "static/js/4.6e13796c.chunk.js.map": "/react-pixi-dragonbones/static/js/4.6e13796c.chunk.js.map",
+    "static/js/4.3986c5c5.chunk.js": "/react-pixi-dragonbones/static/js/4.3986c5c5.chunk.js",
+    "static/js/4.3986c5c5.chunk.js.map": "/react-pixi-dragonbones/static/js/4.3986c5c5.chunk.js.map",
     "index.html": "/react-pixi-dragonbones/index.html",
-    "precache-manifest.71650cdf8ab43ad7b29a03c4ca36ed16.js": "/react-pixi-dragonbones/precache-manifest.71650cdf8ab43ad7b29a03c4ca36ed16.js",
+    "precache-manifest.037721f524b848859c5d83b9507da4f8.js": "/react-pixi-dragonbones/precache-manifest.037721f524b848859c5d83b9507da4f8.js",
     "service-worker.js": "/react-pixi-dragonbones/service-worker.js",
     "static/css/3.4cf5f81b.chunk.css.map": "/react-pixi-dragonbones/static/css/3.4cf5f81b.chunk.css.map",
     "static/css/4.68b74e9f.chunk.css.map": "/react-pixi-dragonbones/static/css/4.68b74e9f.chunk.css.map",
     "static/css/main.860317d1.chunk.css.map": "/react-pixi-dragonbones/static/css/main.860317d1.chunk.css.map",
-    "static/media/parallaxCove_tex.png": "/react-pixi-dragonbones/static/media/parallaxCove_tex.753b7cc9.png"
+    "static/media/parallaxCove_tex.png": "/react-pixi-dragonbones/static/media/parallaxCove_tex.7f5aaebf.png"
   }
 }
