@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-pixi-dragonbones/precache-manifest.037721f524b848859c5d83b9507da4f8.js"
+  "/react-pixi-dragonbones/precache-manifest.349f4075558f46289d87c306dd1e0083.js"
 );
 
 self.addEventListener('message', (event) => {
