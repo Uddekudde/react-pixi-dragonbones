@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<header
+  className="MuiPaper-root-9 MuiPaper-elevation4-15 MuiAppBar-root-1 MuiAppBar-positionFixed-2 MuiAppBar-colorDefault-6 mui-fixed"
+  style={
+    Object {
+      "background": "transparent",
+      "boxShadow": "none",
+      "flexGrow": 1,
+    }
+  }
+>
+  <div
+    className="MuiToolbar-root-36 MuiToolbar-regular-38 MuiToolbar-gutters-37"
+  >
+    <h2
+      className="MuiTypography-root-40 MuiTypography-title-46 MuiTypography-colorInherit-59"
+    >
+      <a
+        className="MuiButtonBase-root-91 MuiButton-root-65 MuiButton-text-67 MuiButton-flat-70"
+        href="#/about"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+        tabIndex="0"
+      >
+        <span
+          className="MuiButton-label-66"
+        >
+          About
+        </span>
+        <span
+          className="MuiTouchRipple-root-94"
+        />
+      </a>
+    </h2>
+    <div
+      style={
+        Object {
+          "flex": "1 100px",
+        }
+      }
+    />
+  </div>
+</header>
+`;
