@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-pixi-dragonbones/static/css/main.860317d1.chunk.css",
-    "main.js": "/react-pixi-dragonbones/static/js/main.bb089ba0.chunk.js",
-    "main.js.map": "/react-pixi-dragonbones/static/js/main.bb089ba0.chunk.js.map",
+    "main.js": "/react-pixi-dragonbones/static/js/main.592299e7.chunk.js",
+    "main.js.map": "/react-pixi-dragonbones/static/js/main.592299e7.chunk.js.map",
     "runtime-main.js": "/react-pixi-dragonbones/static/js/runtime-main.cc234310.js",
     "runtime-main.js.map": "/react-pixi-dragonbones/static/js/runtime-main.cc234310.js.map",
     "static/js/2.b3f85c56.chunk.js": "/react-pixi-dragonbones/static/js/2.b3f85c56.chunk.js",
@@ -14,7 +14,7 @@
     "static/js/4.b71faab7.chunk.js": "/react-pixi-dragonbones/static/js/4.b71faab7.chunk.js",
     "static/js/4.b71faab7.chunk.js.map": "/react-pixi-dragonbones/static/js/4.b71faab7.chunk.js.map",
     "index.html": "/react-pixi-dragonbones/index.html",
-    "precache-manifest.d9ad33b31084a028100a4e24b24dfdaa.js": "/react-pixi-dragonbones/precache-manifest.d9ad33b31084a028100a4e24b24dfdaa.js",
+    "precache-manifest.6b51c965d7a934b693da531afbe813a1.js": "/react-pixi-dragonbones/precache-manifest.6b51c965d7a934b693da531afbe813a1.js",
     "service-worker.js": "/react-pixi-dragonbones/service-worker.js",
     "static/css/3.4cf5f81b.chunk.css.map": "/react-pixi-dragonbones/static/css/3.4cf5f81b.chunk.css.map",
     "static/css/4.68b74e9f.chunk.css.map": "/react-pixi-dragonbones/static/css/4.68b74e9f.chunk.css.map",
