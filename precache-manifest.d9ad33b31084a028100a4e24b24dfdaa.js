@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "286444b2362676e014623282f90f5f28",
+    "revision": "d18eafa89fdff3611b53a0e35b558cef",
     "url": "/react-pixi-dragonbones/index.html"
   },
   {
-    "revision": "e9d02f3458a4671b04e6",
+    "revision": "5fb4748868b68a024ac1",
     "url": "/react-pixi-dragonbones/static/css/3.4cf5f81b.chunk.css"
   },
   {
-    "revision": "3733f83c145b0f03d38f",
+    "revision": "44785504b58f4dedac36",
     "url": "/react-pixi-dragonbones/static/css/4.68b74e9f.chunk.css"
   },
   {
-    "revision": "32abad5ffa239bce5216",
+    "revision": "bd5234aa30f9d6a19068",
     "url": "/react-pixi-dragonbones/static/css/main.860317d1.chunk.css"
   },
   {
@@ -20,20 +20,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-pixi-dragonbones/static/js/2.b3f85c56.chunk.js"
   },
   {
-    "revision": "e9d02f3458a4671b04e6",
-    "url": "/react-pixi-dragonbones/static/js/3.2213fdaf.chunk.js"
+    "revision": "5fb4748868b68a024ac1",
+    "url": "/react-pixi-dragonbones/static/js/3.410e8246.chunk.js"
   },
   {
-    "revision": "3733f83c145b0f03d38f",
-    "url": "/react-pixi-dragonbones/static/js/4.9cc03b93.chunk.js"
+    "revision": "44785504b58f4dedac36",
+    "url": "/react-pixi-dragonbones/static/js/4.b71faab7.chunk.js"
   },
   {
-    "revision": "32abad5ffa239bce5216",
-    "url": "/react-pixi-dragonbones/static/js/main.31c2766a.chunk.js"
+    "revision": "bd5234aa30f9d6a19068",
+    "url": "/react-pixi-dragonbones/static/js/main.bb089ba0.chunk.js"
   },
   {
-    "revision": "8f49abe38c9665562650",
-    "url": "/react-pixi-dragonbones/static/js/runtime-main.e39db363.js"
+    "revision": "dc9772248281cb716e6e",
+    "url": "/react-pixi-dragonbones/static/js/runtime-main.cc234310.js"
   },
   {
     "revision": "7f5aaebf54990e03ae0486f012b3a920",
